@@ -5,13 +5,13 @@
 class Dotfiles < Formula
   desc "Declarative dotfiles manager and AI tmux workspace orchestrator"
   homepage "https://github.com/entelecheia/dotfiles-v2"
-  version "2.69.1"
+  version "2.69.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/entelecheia/dotfiles-v2/releases/download/v2.69.1/dot_2.69.1_darwin_amd64.tar.gz"
-      sha256 "59625c4ed152bc1b6a930d816d316254c3b9355d5714f50d0ffe7113ede262c3"
+      url "https://github.com/entelecheia/dotfiles-v2/releases/download/v2.69.2/dot_2.69.2_darwin_amd64.tar.gz"
+      sha256 "241ca0797fe834a48cb0fb0377c1b7796acc1659f57ced29f51620d3e68db8ac"
 
       define_method(:install) do
         bin.install "dot"
@@ -19,8 +19,8 @@ class Dotfiles < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/entelecheia/dotfiles-v2/releases/download/v2.69.1/dot_2.69.1_darwin_arm64.tar.gz"
-      sha256 "e417563d63c444dbb1467103411675a06b8e7e76c3d6ab8e45baab0f779fb1c9"
+      url "https://github.com/entelecheia/dotfiles-v2/releases/download/v2.69.2/dot_2.69.2_darwin_arm64.tar.gz"
+      sha256 "f4dafc89f057297efcd4353f9111287a2fa2e6db05d5bf2091b2a589b64eda37"
 
       define_method(:install) do
         bin.install "dot"
@@ -31,16 +31,16 @@ class Dotfiles < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/entelecheia/dotfiles-v2/releases/download/v2.69.1/dot_2.69.1_linux_amd64.tar.gz"
-      sha256 "4daf5ce3a00aaea7752f5b647467877b6156a37f1bed4f05c3ed5c62cd6a94d8"
+      url "https://github.com/entelecheia/dotfiles-v2/releases/download/v2.69.2/dot_2.69.2_linux_amd64.tar.gz"
+      sha256 "0132f46e86c51006c4c1974c1243a732fe73211f813297df3e0c7c5392df56e3"
       define_method(:install) do
         bin.install "dot"
         bin.install_symlink "dot" => "dotfiles"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/entelecheia/dotfiles-v2/releases/download/v2.69.1/dot_2.69.1_linux_arm64.tar.gz"
-      sha256 "51cbd8790b849f5bbf43b2b8951827a4f5d4e8b0d66e709060f97707be3dc493"
+      url "https://github.com/entelecheia/dotfiles-v2/releases/download/v2.69.2/dot_2.69.2_linux_arm64.tar.gz"
+      sha256 "32e98b21a465471328637a2c1173ba947d5f59c153afef44f95e87e9af78aa91"
       define_method(:install) do
         bin.install "dot"
         bin.install_symlink "dot" => "dotfiles"
